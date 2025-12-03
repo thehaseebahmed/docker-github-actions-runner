@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        release: [jammy, focal, noble]
-        platform: [amd64, arm64]
+        release: [noble]
+        platform: [amd64]
       fail-fast: false
     steps:
       - name: Copy Repo Files
@@ -81,8 +81,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        release: [bookworm, trixie]
-        platform: [amd64, arm64]
+        release: [trixie]
+        platform: [amd64]
       fail-fast: false
     steps:
       - name: Copy Repo Files
@@ -181,7 +181,7 @@ jobs:
     needs: ubuntu_base_tests
     strategy:
       matrix:
-        release: [jammy, focal, noble]
+        release: [noble]
       fail-fast: false
     steps:
       - name: Copy Repo Files
@@ -221,7 +221,7 @@ jobs:
     needs: debian_base_tests
     strategy:
       matrix:
-        release: [bookworm, trixie]
+        release: [trixie]
       fail-fast: false
     steps:
       - name: Copy Repo Files

@@ -77,7 +77,7 @@ jobs:
     needs: create-release
     strategy:
       matrix:
-        release: [jammy, focal, noble]
+        release: [noble]
       fail-fast: false
     steps:
       - name: Copy Repo Files
@@ -125,7 +125,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        release: [bookworm, trixie]
+        release: [trixie]
       fail-fast: false
     needs: create-release
     steps:
